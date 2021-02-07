@@ -11,7 +11,7 @@ button.addEventListener('click', function () {
 const displayFoods = foods => {
     console.log(foods);
     const foodsDiv = document.getElementById('foods')
-     foodsDiv.innerHTML = null;
+    foodsDiv.innerHTML = null;
 
     foods.forEach(food => {
         // const food = foods[i];
@@ -25,10 +25,7 @@ const displayFoods = foods => {
      
         <h3> ${food.strMeal} </h3>
         </div>
-        
-     
-     
-     `
+        `
 
         foodDiv.innerHTML = foodInfo;
         foodsDiv.appendChild(foodDiv);
@@ -43,14 +40,14 @@ const displayFoodDetail = name => {
         .then(res => res.json())
         .then(data => displayIndividualFoodDetail(data.meals));
 
-       }
+}
 
-      const AgainFoodDetail = document.getElementById('individualFood');
+const AgainFoodDetail = document.getElementById('individualFood');
 
-       function displayIndividualFoodDetail(individualIteam){
-           const individualFoodItem = individualIteam[0];
-           console.log(individualFoodItem);
-           const againIndividualFoodDetail = `
+function displayIndividualFoodDetail(individualIteam) {
+    const individualFoodItem = individualIteam[0];
+    console.log(individualFoodItem);
+    const againIndividualFoodDetail = `
            <img class="pic-size" src="${individualFoodItem.strMealThumb}">
            <h3> ${individualFoodItem.strMeal} </h3>
            
@@ -66,11 +63,11 @@ const displayFoodDetail = name => {
 
            </ul>
            `
-           
-           AgainFoodDetail.innerHTML = againIndividualFoodDetail;
-           document.getElementById('individualFood').style.display = 'block';
 
-           
+    AgainFoodDetail.innerHTML = againIndividualFoodDetail;
+    document.getElementById('individualFood').style.display = 'block';
 
-            
-    }
+
+
+
+}
