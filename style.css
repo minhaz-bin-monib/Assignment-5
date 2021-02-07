@@ -1,0 +1,23 @@
+#foods{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    
+
+    
+}
+.food{
+    border: 1px solid 
+    
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    
+}
+.pic-size{
+    width: 200px;
+}
+#individualFood{
+    display: none;
+
+}
